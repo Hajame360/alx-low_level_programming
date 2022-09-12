@@ -5,19 +5,29 @@
 * main - print the string in the put function
 *
 * Description: using the main function
-* this program prints alphabets from A to Z in small
+* this program prints the last digit with variable n
 * Return: 0
 */
 int main(void)
 {
 int n;
+int l;
+
 srand(time(0));
 n = rand() - RAND_MAX / 2;
-/* your code goes there */
-char ch;
-for (ch = 'a' ; ch <= 'z' ; ch++)
+l = n % 10;
+
+if (l > 5)
 {
-putchar(ch;
+printf("Last digit of %d is %d and is greater that 5\n", n, l);
 }
-putchar('\n')
+else if (l == 0)
+{
+printf("Last digit of %d is %d and is 0\n", n, l);
+}
+else
+{
+printf("Last digit of %d is %d and is less than 6 and not 0\n", n, l);
+}
 return (0);
+}
